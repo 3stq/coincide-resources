@@ -9,7 +9,7 @@ local executor_name      = identifyexecutor and identifyexecutor() or "Unknown";
 local http               = game.HttpGet;
 local load_string        = loadstring;
 local msgbox             = messageboxasync or messagebox;
-local url                = "https://raw.githubusercontent.com/3stq/chadvision-resources/refs/heads/main/Games/";
+local url                = "https://raw.githubusercontent.com/3stq/coincide-resources/refs/heads/main/Games/";
 
 local games = {};
 do
@@ -91,12 +91,12 @@ do
 
         local clean_game = loader.clean(game_name);
         local choice = loader.message(
-            "No script is officially supported for this game: " .. clean_game .. "\nAre you sure you want to load universal?",
-            "[" .. executor_name .. "] Universal"
+            "No script is officially supported for this game: " .. clean_game .. "\nAre you sure you want to load Havoc?",
+            "[" .. executor_name .. "] Havoc"
         );
 
         if (choice == 6) then
-            return "universal";
+            return "Havoc";
         else
             return nil;
         end;
@@ -108,7 +108,7 @@ do
 
     if (selected_game == "fallen survival") then
         loader.fetch(url .. "Fallen.lua");
-    elseif (selected_game == "universal") then
-        loader.fetch(url .. "Universal.lua");
+    elseif (selected_game == "Havoc") then
+        loader.fetch(url .. "Havoc.lua");
     end;
 end
